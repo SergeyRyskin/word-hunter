@@ -70,7 +70,7 @@ class _CreateAccountState extends State<CreateAccount> {
                     child: Container(
                       width: size.width,
                       alignment: Alignment.center,
-                      child: field(size, "Name", Icons.account_box, _name),
+                      child: field(size, "Name", Icons.account_circle, _name),
                     ),
                   ),
                   Container(
