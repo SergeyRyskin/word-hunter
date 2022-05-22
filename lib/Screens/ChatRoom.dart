@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -23,7 +22,8 @@ class ChatRoom extends StatelessWidget {
     ImagePicker _picker = ImagePicker();
 
     await _picker.pickImage(source: ImageSource.gallery).then((xFile) {
-      if (xFile != null) {
+      if (xFile != null)
+      {
         imageFile = File(xFile.path);
         uploadImage();
       }
@@ -60,22 +60,22 @@ class ChatRoom extends StatelessWidget {
       status = 0;
     });
 
-    if (status == 1) {
+    if (status == 1)
+    {
       String imageUrl = await uploadTask.ref.getDownloadURL();
-
       await _firestore
           .collection('chatroom')
           .doc(chatRoomId)
           .collection('chats')
           .doc(fileName)
           .update({"message": imageUrl});
-
       print(imageUrl);
     }
   }
 
   void onSendMessage() async {
-    if (_message.text.isNotEmpty) {
+    if (_message.text.isNotEmpty)
+    {
       Map<String, dynamic> messages = {
         "sendby": _auth.currentUser!.displayName,
         "message": _message.text,
@@ -89,7 +89,9 @@ class ChatRoom extends StatelessWidget {
           .doc(chatRoomId)
           .collection('chats')
           .add(messages);
-    } else {
+    }
+    else
+    {
       print("Enter Some Text");
     }
   }
@@ -104,7 +106,8 @@ class ChatRoom extends StatelessWidget {
           stream:
               _firestore.collection("users").doc(userMap['uid']).snapshots(),
           builder: (context, snapshot) {
-            if (snapshot.data != null) {
+            if (snapshot.data != null)
+            {
               return Container(
                 child: Column(
                   children: [
@@ -116,7 +119,9 @@ class ChatRoom extends StatelessWidget {
                   ],
                 ),
               );
-            } else {
+            }
+            else
+            {
               return Container();
             }
           },
@@ -137,7 +142,8 @@ class ChatRoom extends StatelessWidget {
                     .snapshots(),
                 builder: (BuildContext context,
                     AsyncSnapshot<QuerySnapshot> snapshot) {
-                  if (snapshot.data != null) {
+                  if (snapshot.data != null)
+                  {
                     return ListView.builder(
                       itemCount: snapshot.data!.docs.length,
                       itemBuilder: (context, index) {
@@ -146,7 +152,9 @@ class ChatRoom extends StatelessWidget {
                         return messages(size, map, context);
                       },
                     );
-                  } else {
+                  }
+                  else
+                  {
                     return Container();
                   }
                 },
@@ -202,7 +210,7 @@ class ChatRoom extends StatelessWidget {
               margin: EdgeInsets.symmetric(vertical: 5, horizontal: 8),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
-                color: Colors.blue,
+                color: Colors.greenAccent,
               ),
               child: Text(
                 map['message'],

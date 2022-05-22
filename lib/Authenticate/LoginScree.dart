@@ -16,10 +16,9 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-
     return Scaffold(
-      body: isLoading
-          ? Center(
+      body: isLoading ?
+      Center(
               child: Container(
                 height: size.height / 20,
                 width: size.height / 20,
@@ -91,7 +90,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Text(
                       "Create Account",
                       style: TextStyle(
-                        color: Colors.blue,
+                        color: Colors.greenAccent,
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
                       ),
@@ -106,27 +105,34 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget customButton(Size size) {
     return GestureDetector(
       onTap: () {
-        if (_email.text.isNotEmpty && _password.text.isNotEmpty) {
+
+        if (_email.text.isNotEmpty && _password.text.isNotEmpty)
+          {
           setState(() {
             isLoading = true;
           });
-
           logIn(_email.text, _password.text).then((user) {
-            if (user != null) {
+
+            if (user != null)
+            {
               print("Login Sucessfull");
               setState(() {
-                isLoading = false;
-              });
+              isLoading = false;
+            });
               Navigator.push(
                   context, MaterialPageRoute(builder: (_) => HomeScreen()));
-            } else {
+            }
+            else
+            {
               print("Login Failed");
               setState(() {
                 isLoading = false;
-              });
+            });
             }
           });
-        } else {
+        }
+        else
+        {
           print("Please fill form correctly");
         }
       },
