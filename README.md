@@ -1,16 +1,13 @@
-# chat_app
+# Word Hunter
 
-A new Flutter project.
+A new 5er9en project.
 
-## Getting Started
+## What is Word Hunter?
+This Messaging App is made using Google Cloud and Google FireBase technologies.
+The purpose here is not to keep any data on the user's phone and to provide a secure conversation.
 
-This project is a starting point for a Flutter application.
+### Reference 
+-The source code was not written from scratch. 
+ It was taken from the Internet and a large amount of development was made on it.
+ These improvements have been developed both by design and by the database.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
