@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "404891437541",
-    "project_id": "word-hunter-1ae2c",
-    "storage_bucket": "word-hunter-1ae2c.appspot.com"
+    "project_number": "876133667696",
+    "project_id": "word-hunter-6aba1",
+    "storage_bucket": "word-hunter-6aba1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:404891437541:android:f88371e6a9cb3df477c70c",
+        "mobilesdk_app_id": "1:876133667696:android:e7e2df5315a7947b7db5b5",
         "android_client_info": {
           "package_name": "com.example.chat_app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "404891437541-juhlikcoiovabas3q91q8huuoduioshf.apps.googleusercontent.com",
+          "client_id": "876133667696-a63057bs6sr9hn8vadmn20pdsbi9ovle.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBB3zFknt7WqGfwI5agfWecR_5CSJ7YPE0"
+          "current_key": "AIzaSyCsv5eLI6TUHLcZD9aUnlbXuLTgEvT3RcY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "404891437541-juhlikcoiovabas3q91q8huuoduioshf.apps.googleusercontent.com",
+              "client_id": "876133667696-a63057bs6sr9hn8vadmn20pdsbi9ovle.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

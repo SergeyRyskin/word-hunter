@@ -99,10 +99,10 @@ class GroupChatRoom extends StatelessWidget {
                       child: TextField(
                         controller: _message,
                         decoration: InputDecoration(
-                            suffixIcon: IconButton(
-                              onPressed: () {},
-                              icon: Icon(Icons.photo),
-                            ),
+                            // suffixIcon: IconButton(
+                            //   onPressed: () {},
+                            //   icon: Icon(Icons.photo),
+                            // ),
                             hintText: "Send Message",
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(8),
@@ -134,7 +134,7 @@ class GroupChatRoom extends StatelessWidget {
               margin: EdgeInsets.symmetric(vertical: 5, horizontal: 8),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
-                color: Colors.greenAccent,
+                color: Colors.blueAccent,
               ),
               child: Column(
                 children: [

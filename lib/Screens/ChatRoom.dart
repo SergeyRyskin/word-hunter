@@ -62,14 +62,14 @@ class ChatRoom extends StatelessWidget {
 
     if (status == 1)
     {
-      String imageUrl = await uploadTask.ref.getDownloadURL();
+      String ImageUrl = await uploadTask.ref.getDownloadURL();
       await _firestore
           .collection('chatroom')
           .doc(chatRoomId)
           .collection('chats')
           .doc(fileName)
-          .update({"message": imageUrl});
-      print(imageUrl);
+          .update({"message": ImageUrl});
+      print(ImageUrl);
     }
   }
 
@@ -210,7 +210,7 @@ class ChatRoom extends StatelessWidget {
               margin: EdgeInsets.symmetric(vertical: 5, horizontal: 8),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
-                color: Colors.greenAccent,
+                color: Colors.blueAccent,
               ),
               child: Text(
                 map['message'],
@@ -274,4 +274,3 @@ class ShowImage extends StatelessWidget {
   }
 }
 
-//

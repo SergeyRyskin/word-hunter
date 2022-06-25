@@ -29,16 +29,10 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Column(
                 children: [
                   SizedBox(
-                    height: size.height / 20,
-                  ),
-                  Container(
-                    alignment: Alignment.centerLeft,
-                    width: size.width / 0.5,
-                    child: IconButton(
-                        icon: Icon(Icons.arrow_back_ios), onPressed: () {}),
+                    height: size.height / 15,
                   ),
                   SizedBox(
-                    height: size.height / 50,
+                    height: size.height / 20,
                   ),
                   Container(
                     width: size.width / 1.1,
@@ -62,23 +56,23 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   SizedBox(
-                    height: size.height / 10,
+                    height: size.height / 5,
                   ),
                   Container(
                     width: size.width,
                     alignment: Alignment.center,
-                    child: field(size, "email", Icons.account_box, _email),
+                    child: field(size, "Email", Icons.account_circle_sharp, _email),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 18.0),
                     child: Container(
                       width: size.width,
                       alignment: Alignment.center,
-                      child: field(size, "password", Icons.lock, _password),
+                      child: field(size, "Password", Icons.key, _password),
                     ),
                   ),
                   SizedBox(
-                    height: size.height / 10,
+                    height: size.height / 50,
                   ),
                   customButton(size),
                   SizedBox(
@@ -90,7 +84,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Text(
                       "Create Account",
                       style: TextStyle(
-                        color: Colors.greenAccent,
+                        color: Colors.blueAccent,
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
                       ),

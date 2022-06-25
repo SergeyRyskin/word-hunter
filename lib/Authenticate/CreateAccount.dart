@@ -1,3 +1,4 @@
+import 'package:chat_app/Authenticate/LoginScree.dart';
 import 'package:chat_app/Authenticate/Methods.dart';
 import 'package:flutter/material.dart';
 import '../Screens/HomeScreen.dart';
@@ -36,7 +37,12 @@ class _CreateAccountState extends State<CreateAccount> {
                     alignment: Alignment.centerLeft,
                     width: size.width / 0.5,
                     child: IconButton(
-                        icon: Icon(Icons.arrow_back_ios), onPressed: () {}),
+                      icon: Icon(Icons.arrow_back_ios), onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context)=> LoginScreen()),
+                      );
+                    }),
                   ),
                   SizedBox(
                     height: size.height / 50,
@@ -54,7 +60,7 @@ class _CreateAccountState extends State<CreateAccount> {
                   Container(
                     width: size.width / 1.1,
                     child: Text(
-                      "Create Account to Contiue!",
+                      "Create Account to Continue!",
                       style: TextStyle(
                         color: Colors.grey[700],
                         fontSize: 20,
@@ -63,7 +69,7 @@ class _CreateAccountState extends State<CreateAccount> {
                     ),
                   ),
                   SizedBox(
-                    height: size.height / 20,
+                    height: size.height / 10,
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 18.0),
@@ -76,14 +82,14 @@ class _CreateAccountState extends State<CreateAccount> {
                   Container(
                     width: size.width,
                     alignment: Alignment.center,
-                    child: field(size, "email", Icons.account_box, _email),
+                    child: field(size, "Email", Icons.mail, _email),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 18.0),
                     child: Container(
                       width: size.width,
                       alignment: Alignment.center,
-                      child: field(size, "password", Icons.lock, _password),
+                      child: field(size, "Password", Icons.key, _password),
                     ),
                   ),
                   SizedBox(
@@ -95,9 +101,9 @@ class _CreateAccountState extends State<CreateAccount> {
                     child: GestureDetector(
                       onTap: () => Navigator.pop(context),
                       child: Text(
-                        "Login",
+                        "or Login",
                         style: TextStyle(
-                          color: Colors.greenAccent,
+                          color: Colors.blueAccent,
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
                         ),
@@ -127,7 +133,7 @@ class _CreateAccountState extends State<CreateAccount> {
               });
               Navigator.push(
                   context, MaterialPageRoute(builder: (_) => HomeScreen()));
-              print("Account Created Sucessfull");
+              print("Account Created Successfully");
             } else {
               print("Login Failed");
               setState(() {
@@ -144,7 +150,7 @@ class _CreateAccountState extends State<CreateAccount> {
           width: size.width / 1.2,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(5),
-            color: Colors.greenAccent,
+            color: Colors.blueAccent,
           ),
           alignment: Alignment.center,
           child: Text(

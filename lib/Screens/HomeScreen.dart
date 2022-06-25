@@ -76,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home Screen"),
+        title: Text("Search a Chat"),
         actions: [
           IconButton(icon: Icon(Icons.logout), onPressed: () => logOut(context))
         ],
@@ -104,7 +104,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                     child: TextField(
                       controller: _search,
                       decoration: InputDecoration(
-                        hintText: "Search",
+                        hintText: "Find user with email",
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
@@ -138,7 +138,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                             ),
                           );
                         },
-                        leading: Icon(Icons.account_box, color: Colors.black),
+                        leading: Icon(Icons.account_circle_sharp, color: Colors.black),
                         title: Text(
                           userMap!['name'],
                           style: TextStyle(
